@@ -18,11 +18,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [SYYHuobiNetHandler requestAccountsWithTag:self succeed:^(id respondObject) {
-
-        NSLog(@"-----%@",respondObject);
+//    [SYYHuobiNetHandler requestAccountsWithTag:self succeed:^(id respondObject) {
+//
+//        NSLog(@"ViewController requestAccountsWithTag succeed-----%@",respondObject);
+//    } failed:^(id error) {
+//        NSLog(@"ViewController requestAccountsWithTag failed -----%@",error);
+//    }];
+    
+    
+//    [SYYHuobiNetHandler requestAccountBalanceWithTag:self accountId:@"860551" succeed:^(id respondObject) {
+//
+//        NSLog(@"ViewController requestAccountBalanceWithTag succeed-----%@",respondObject);
+//    } failed:^(id error) {
+//        NSLog(@"ViewController requestAccountBalanceWithTag failed -----%@",error);
+//    }];
+    
+    [SYYHuobiNetHandler requestDetailWithTag:self symbol:@"btcusdt" succeed:^(id respondObject) {
+        
+        NSLog(@"ViewController requestDetailWithTag succeed-----%@",respondObject);
     } failed:^(id error) {
-        NSLog(@"-----%@",error);
+        NSLog(@"ViewController requestDetailWithTag failed -----%@",error);
     }];
     
    
