@@ -15,6 +15,7 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -32,9 +33,10 @@
 //    } failed:^(id error) {
 //        NSLog(@"ViewController requestAccountBalanceWithTag failed -----%@",error);
 //    }];
-    
+//获取btcusdt最新价格 GET /market/detail 获取 Market Detail 24小时成交量数据
+// https://github.com/huobiapi/API_Docs/wiki/REST_api_reference
     [SYYHuobiNetHandler requestDetailWithTag:self symbol:@"btcusdt" succeed:^(id respondObject) {
-        
+
         NSLog(@"ViewController requestDetailWithTag succeed-----%@",respondObject);
     } failed:^(id error) {
         NSLog(@"ViewController requestDetailWithTag failed -----%@",error);
@@ -43,6 +45,19 @@
    
 }
 
+//买入价
+- (IBAction)buyPrice:(id)sender {
+}
+//买入数量
+- (IBAction)buyNum:(id)sender {
+}
+
+//刷新
+- (IBAction)refresh:(id)sender {
+}
+//计算
+- (IBAction)calculate:(id)sender {
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
